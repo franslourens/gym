@@ -1,0 +1,26 @@
+Jimmy\GymBundle\Entity\FitnessDetail:
+    type: entity
+    table: fitness_detail
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        capture_date:
+            type: date
+        waist:
+            type: decimal
+        thigh:
+            type: decimal
+        upper_arm:
+            type: decimal
+        bmi:
+            type: decimal
+        resting_heart_rate:
+            type: decimal
+    manyToOne:
+      user:
+        targetEntity: User
+        inversedBy: user
+    lifecycleCallbacks: {  }

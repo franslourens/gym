@@ -1,0 +1,52 @@
+{# {% extends 'JimmyGymBundle::layout.html.twig' %}#}
+
+{% block content_main -%}
+    <h1>FitnessDetail</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Capture_date</th>
+                <td>{{ entity.capturedate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Waist</th>
+                <td>{{ entity.waist }}</td>
+            </tr>
+            <tr>
+                <th>Thigh</th>
+                <td>{{ entity.thigh }}</td>
+            </tr>
+            <tr>
+                <th>Upper_arm</th>
+                <td>{{ entity.upperarm }}</td>
+            </tr>
+            <tr>
+                <th>Bmi</th>
+                <td>{{ entity.bmi }}</td>
+            </tr>
+            <tr>
+                <th>Resting_heart_rate</th>
+                <td>{{ entity.restingheartrate }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('fitnessdetail') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('fitnessdetail_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

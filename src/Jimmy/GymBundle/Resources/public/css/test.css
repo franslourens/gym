@@ -1,0 +1,343 @@
+@charset "windows-1252";
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700,700italic");
+
+html {width:100%; height:auto; margin: 0; padding: 0;}
+*	 { margin: 0; padding: 0; }
+
+body {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    color: #000;
+    background: url("../default.jpg") repeat scroll left top transparent;
+    font-family: "Open Sans", "Verdana", "Arial";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.sidebar {    
+    min-height : 1200px;
+    height : 100%;            /* Internet Explorer treats as min-height. */
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 220px;
+    padding: 0px 20px 0px 10px;
+    background: url("images/nav_line.jpg") repeat-y scroll right top rgb(25, 24, 24);
+}
+
+.sidebar .top {
+    float: left;
+    width: 220px;
+    margin: 10px 0px;
+}
+
+.sidebar .top .logo {
+    width: 220px;
+    height: 85px;
+    float: left;
+    display: block;
+    background: url("images/logo3.png") no-repeat scroll left top transparent;
+    margin-bottom: 20px;
+}
+
+.body {
+    position: relative;
+    margin-left: 250px;
+    padding: 0px 0px 0px 20px;
+}
+
+.body .navigation {
+    padding: 10px 0px 25px;
+    float: right;
+    margin: 0px;
+    list-style: none outside none;
+    display: block;
+    position: relative;
+}
+
+.body .navigation li {
+    margin-left: 3px;
+    margin-bottom: 3px;
+    display: block;
+    float: left;
+}
+
+.body .navigation .button {
+    width: 90px;
+    height: 90px;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    position: relative;
+}
+#block1 {background-color: #F01D12}
+#block2 {background-color: #F7A60B}
+#block3 {background-color: #99B84D}
+#block4 {background-color: #009AD7}
+
+
+.body .navigation .button .icon {
+    position: relative;
+    float: right;
+    width: 98%;
+    padding-top: 10px;
+    height: 50%;
+    z-index: 50;
+}
+
+.body .navigation .button .icon img {
+    position: relative;
+    float: right;
+}  
+
+.button .name {
+    color: #fff;
+}
+
+.body .content {
+    width: 100%;
+    display: block;
+}
+
+.page-header {
+    padding: 0px 0px 5px;
+    margin: 0px 0px 0px 0px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    width: 100%;
+    float: left;
+}
+
+.page-header .wrap-title {
+    float: left;
+    margin-bottom: 5px;
+}
+
+.page-header .icon {
+    float: left;
+    display: block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgb(153, 153, 153);
+    padding: 2px;
+    margin-top: 7px;
+    border-radius: 50% 50% 50% 50%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: rgb(76, 76, 76);
+    font-weight: normal;
+    display: block;
+    float: left;
+    line-height: 35px;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 28px;
+    color: rgb(76, 76, 76);
+    font-weight: normal;
+    display: block;
+    float: left;
+    line-height: 35px;
+    padding-bottom: 10px;
+    margin: 0px;
+    width: 95%;
+    border-bottom: 2px solid rgb(76, 76, 76);
+}
+
+.page-header h1 small {
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+    display: block;
+    line-height: 20px;
+}
+
+h2 {
+    font-size: 16px;
+    padding: 0 0 0 3px;
+}
+
+h3 {
+    color: #ec6608;
+}
+
+a {
+
+}
+
+a:hover {
+
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+p {
+
+}
+
+span {
+    font-style: italic;
+}
+
+.clear {
+    clear: both;
+    font-size: 0px;
+    height: 0px;
+    line-height: 0px;
+}
+
+.clear_3px {
+    clear: both;
+    font-size: 3px;
+    height: 3px;
+    line-height: 3px;
+}
+
+.top_spacer {
+    clear: both;
+    font-size: 20px;
+    height: 20px;
+    background: url("images/split.gif") repeat-x;
+}
+
+.website {
+    width: 1024px;
+    min-height: 890px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    background: #fff;
+    background: url('images/header_texture.gif') repeat;
+}
+#search {
+    border: medium none;
+    position: relative;
+    float: right;
+    margin-top: 8px;
+    background: none repeat scroll 0% 0% #7D7D7D ;/*background: none repeat scroll 0% 0% ;*/
+    height: 35px;
+    width: 98%;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search .inputbox, #search_left input {
+    background: none repeat scroll 0% 0% transparent;
+    border: medium none;
+    display: inline-block;
+    padding: 8px 40px 8px 10px;
+    margin-left: 0px;
+    float: left;
+    width: 211px;
+    height: 19px !important;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+    vertical-align: middle;
+    outline: medium none !important;
+    border-radius: 0px;
+    font-weight: normal;
+    text-transform: none;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#search .button {
+    padding-bottom: 3px !important;
+}
+
+#search .button {
+    border: medium none;
+    background: url("images/search_btn.png") no-repeat scroll left top transparent;
+    color: rgb(255, 255, 255) !important;
+    text-indent: -9999px;
+    width: 10px;
+    height: 22px;
+    font-size: 13px;
+    text-transform: capitalize;
+    line-height: 36px !important;
+    font-family: 'Open Sans',sans-serif;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-style: normal !important;
+    margin: 0px;
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    letter-spacing: 0px;
+    float: none;
+    display: inline-block;
+    border-radius: 0px;
+}
+
+.content_main {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 250px;
+    height: auto;
+}
+
+#top_cover {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 0px -20px; 
+    padding-right: 20px;
+    height: auto;
+    background: #CCCCCC;
+}
+
+.layer_content {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 120px;
+    height: auto;
+}
+
+/*****Menu******/
+.left_menu {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 10px 0px 0px -10px;
+    padding-right: 20px;    
+}
+
+.left_menu #side_menu {
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+}
+
+.left_menu #side_menu li {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 15px 0px 5px;
+    color: #191818;
+    font-size: 16px;
+    background-color: #97bb2c;
+}

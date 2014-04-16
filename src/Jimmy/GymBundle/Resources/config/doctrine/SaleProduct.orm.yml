@@ -1,0 +1,22 @@
+Jimmy\GymBundle\Entity\SaleProduct:
+    type: entity
+    table: sale_product
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        quantity:
+            type: integer
+    manyToOne:
+      sale:
+        targetEntity: Sale
+        inversedBy: sale
+        joinColumn:
+                name: sale_id
+                referencedColumnName: id 
+      product:
+        targetEntity: Product
+        inversedBy: product
+    lifecycleCallbacks: {  }

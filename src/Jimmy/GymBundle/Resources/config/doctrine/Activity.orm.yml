@@ -1,0 +1,19 @@
+Jimmy\GymBundle\Entity\Activity:
+    type: entity
+    table: activity
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        description:
+            type: text
+    oneToMany:
+      session_activity:
+        targetEntity: SessionActivity
+        mappedBy: activity
+    lifecycleCallbacks: {  }

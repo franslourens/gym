@@ -1,0 +1,25 @@
+services:
+    # Default entity manager parameters
+    gym.manager.entity:
+        abstract: true
+        arguments:
+            em: "@doctrine.orm.entity_manager"
+            dispatcher: "@event_dispatcher"
+            
+    # Define a custom user manager but do not access it directly.
+    # Instead, access this through the fos_user.user_manager service.  
+    gym.manager.user:
+        class: Jimmy\GymBundle\Manager\UserManager
+        arguments:
+            encoderFactory: "@security.encoder_factory"
+            usernameCanonicalizer: "@fos_user.util.username_canonicalizer"
+            emailCanonicalizer: "@fos_user.util.email_canonicalizer"
+            om: "@fos_user.entity_manager"
+            class: "%fos_user.model.user.class%"
+        calls:
+            - [setTokenGenerator, ["@fos_user.util.token_generator"]]
+            - [setUserRepository, ["@gym.repository.user"]]
+            
+    gym.manager.fitness_detail:
+        class: Jimmy\GymBundle\Manager\FitnessDetailManager
+        parent: gym.manager.entity   

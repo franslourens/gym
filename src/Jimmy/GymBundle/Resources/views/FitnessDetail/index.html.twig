@@ -1,0 +1,51 @@
+{# {% extends 'JimmyGymBundle::layout.html.twig' %}#}
+
+{% block content -%}
+    <h1>FitnessDetail list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Capture_date</th>
+                <th>Waist</th>
+                <th>Thigh</th>
+                <th>Upper_arm</th>
+                <th>Bmi</th>
+                <th>Resting_heart_rate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('fitnessdetail_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.capturedate %}{{ entity.capturedate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.waist }}</td>
+                <td>{{ entity.thigh }}</td>
+                <td>{{ entity.upperarm }}</td>
+                <td>{{ entity.bmi }}</td>
+                <td>{{ entity.restingheartrate }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('fitnessdetail_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('fitnessdetail_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('fitnessdetail_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

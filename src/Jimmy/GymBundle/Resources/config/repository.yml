@@ -1,0 +1,10 @@
+parameters:
+    gym.repository.user.class: Jimmy\GymBundle\Repository\UserRepository
+
+services:
+    gym.repository.user:
+        class: %gym.repository.user.class%
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Jimmy\GymBundle\Entity\User

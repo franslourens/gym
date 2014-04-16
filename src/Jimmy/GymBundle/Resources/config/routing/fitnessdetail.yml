@@ -1,0 +1,30 @@
+fitnessdetail:
+    pattern:  /
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:index" }
+
+fitnessdetail_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:show" }
+
+fitnessdetail_new:
+    pattern:  /new
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:new" }
+
+fitnessdetail_create:
+    pattern:  /create
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:create" }
+    requirements: { _method: post }
+
+fitnessdetail_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:edit" }
+
+fitnessdetail_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:update" }
+    requirements: { _method: post|put }
+
+fitnessdetail_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "JimmyGymBundle:FitnessDetail:delete" }
+    requirements: { _method: post|delete }

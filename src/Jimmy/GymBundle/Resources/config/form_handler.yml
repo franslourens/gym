@@ -1,0 +1,16 @@
+parameters:
+    # FitnessDetail classes
+    gym.form_handler.fitness_detail.create.class: Jimmy\GymBundle\Form\Handler\FitnessDetailCreateFormHandler
+
+services:
+# FitnessDetail
+    gym.form_handler.fitness_detail:
+        abstract: true
+        arguments:
+            request: "@request"
+            manager: "@gym.manager.fitness_detail"
+        
+    gym.form_handler.fitness_detail.create:
+        class: "%gym.form_handler.fitness_detail.create.class%"
+        parent: gym.form_handler.fitness_detail
+        scope: request

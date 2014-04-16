@@ -1,0 +1,21 @@
+Jimmy\GymBundle\Entity\MemberPlan:
+    type: entity
+    table: member_plan
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        start_date:
+            type: date
+        end_date:
+            type: date
+    manyToOne:
+      user:
+        targetEntity: User
+        inversedBy: user  
+      fitness_plan:
+        targetEntity: FitnessPlan
+        inversedBy: fitnessplan           
+    lifecycleCallbacks: {  }

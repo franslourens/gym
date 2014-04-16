@@ -1,0 +1,23 @@
+Jimmy\GymBundle\Entity\SessionActivity:
+    type: entity
+    table: session_activity
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        order_no:
+            type: integer
+        repititions:
+            type: integer
+        duration:
+            type: decimal
+    manyToOne:
+        session:
+            targetEntity: Session
+            inversedBy: session
+        activity:
+            targetEntity: Activity
+            inversedBy: activity                     
+    lifecycleCallbacks: {  }

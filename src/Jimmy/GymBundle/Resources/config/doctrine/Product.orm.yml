@@ -1,0 +1,23 @@
+Jimmy\GymBundle\Entity\Product:
+    type: entity
+    table: product
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        description:
+            type: text
+        price:
+            type: decimal
+        stock:
+            type: integer
+    oneToMany:
+        sale_product:
+            targetEntity: SaleProduct
+            mappedBy: saleproduct
+    lifecycleCallbacks: {  }

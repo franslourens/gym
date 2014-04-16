@@ -1,0 +1,22 @@
+Jimmy\GymBundle\Entity\Session:
+    type: entity
+    table: session
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        order_no:
+            type: integer
+        description:
+            type: text
+    oneToMany:
+        session_activity:
+            targetEntity: SessionActivity
+            mappedBy: session
+    manyToOne:
+        fitness_plan:
+            targetEntity: FitnessPlan
+            inversedBy: fitness_plan         
+    lifecycleCallbacks: {  }

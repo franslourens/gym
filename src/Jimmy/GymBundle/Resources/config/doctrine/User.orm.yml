@@ -1,0 +1,38 @@
+Jimmy\GymBundle\Entity\User:
+    type:  entity
+    table: gym_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        full_name:
+            type: string
+            length: 255
+            nullable: true
+        birth_date:
+            type: date
+        address:
+            type: text
+        sex:
+            type: integer
+        contact_no:
+            type: string
+            length: 10
+    oneToMany:
+        sale:
+            targetEntity: Sale
+            mappedBy: user
+        subscription:
+            targetEntity: Subscription
+            mappedBy: user
+        member_plan:
+            targetEntity: MemberPlan
+            mappedBy: user
+        fitness_detail:
+            targetEntity: FitnessDetail
+            mappedBy: user
+        fitness_plan:
+            targetEntity: FitnessPlan
+            mappedBy: user

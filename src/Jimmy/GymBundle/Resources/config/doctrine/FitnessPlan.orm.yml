@@ -1,0 +1,30 @@
+Jimmy\GymBundle\Entity\FitnessPlan:
+    type: entity
+    table: fitness_plan
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        publish:
+            type: boolean
+        description:
+            type: text
+        comment:
+            type: text
+    oneToMany:
+      member_plan:
+        targetEntity: MemberPlan
+        mappedBy: fitness_plan
+      session:
+        targetEntity: Session
+        mappedBy: fitness_plan
+    manyToOne:
+      user:
+        targetEntity: User
+        inversedBy: user
+    lifecycleCallbacks: {  }

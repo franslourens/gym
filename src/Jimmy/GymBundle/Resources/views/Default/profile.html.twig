@@ -1,0 +1,34 @@
+{% extends "JimmyGymBundle::layout.html.twig" %}
+
+{% block content -%}
+	<div class="page-header">
+		<div class="wrap-title">
+			<!--<div class="icon"></div>-->
+			<h1>
+				Gym Member Profile
+				<small>Small Page Description</small>
+			</h1>
+		</div>
+		<ul class="breadcrumb"></ul>
+		<div class="clear"></div>
+ 	</div>
+{% endblock %}
+
+{% block content_main -%}
+	<div class="content_main">
+		<div class="layer">
+			<div id="pp">
+				<img src="/bundles/jimmygym/images/user_profile_b24.png"/>
+				<medium>Username : {{ user.username }}</medium>
+				<medium>Birthday : {{ user.birthDate|date("F d, Y", false) }}</medium>
+			</div>
+		</div>
+		<div class="layer_content">
+			<h2>Member Progress</h2>
+				<img src="/bundles/jimmygym/images/progress.png"/>
+		</div>
+		<div class="layer_content">
+			<h2>Member Goals</h2>
+		</div>
+	</div>
+{% endblock %}

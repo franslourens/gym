@@ -1,0 +1,18 @@
+Jimmy\GymBundle\Entity\SubscriptionPayment:
+    type: entity
+    table: subscription_payment
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        payment_date:
+            type: date
+        amount:
+            type: decimal
+    manyToOne:
+      subscription:
+        targetEntity: Subscription
+        inversedBy: subscription
+    lifecycleCallbacks: {  }

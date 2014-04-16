@@ -1,0 +1,17 @@
+services:
+#    gym.form.type.hidden_entity:
+#        class: Lrotherfield\Component\Form\Type\HiddenEntityType
+#        arguments:
+#            - @doctrine.orm.entity_manager
+#        tags:
+#            - { name: form.type, alias: hidden_entity }              
+
+    gym.form.type.user:
+        class: Jimmy\GymBundle\Form\UserType
+        arguments: 
+            - @security.context
+            - @?request=
+        tags:
+            - 
+              name: form.type
+              alias: gym_user
